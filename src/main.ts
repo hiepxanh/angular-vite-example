@@ -1,6 +1,4 @@
-import { otherAction } from './other';
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = 'Hello world';
-otherAction();
+
 
 
 import "@angular/compiler";
@@ -18,3 +16,15 @@ bootstrapApplication(AppComponent, {
         },
     ]
 });
+
+// import { otherAction } from './other';
+
+async function lazyOther () {
+    const { otherAction } = await import('./other');
+    document.querySelector<HTMLDivElement>('#app')!.innerHTML = 'Hello world';
+    otherAction();
+}
+
+if (false) {
+    lazyOther();
+}
