@@ -24,7 +24,9 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    console.log("known issue: templateUrl not working on this version. You should try inline template which was commented")
+  }
 
   ngOnInit(): void {}
 }
