@@ -1,3 +1,7 @@
 # Angular 15 Standalone with Vite 3 and crazy speed
 
+
 all is Vite and Angular, tailwind if you like. That all to start a new journey
+
+
+known issue: #1 templateUrl not working on this version. You should try inline template which was commented
