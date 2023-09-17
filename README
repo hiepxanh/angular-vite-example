@@ -1,7 +1,20 @@
 # Angular 15 Standalone with Vite 3 and crazy speed
-
-
 all is Vite and Angular, tailwind if you like. That all to start a new journey
-
-
 known issue: #1 templateUrl not working on this version. You should try inline template which was commented
+
+To support selector matching, the Angular compiler needs to maintain a dependency graph between your components which requires a different compilation model than Vite.
+
+[https://blog.angular.io/angular-v16-is-here-4d7a28ec680d](https://blog.angular.io/angular-v16-is-here-4d7a28ec680d)
+
+You can give Vite + esbuild a try by updating your angular.json:
+
+``` 
+
+...
+"architect": {
+  "build": {                     /* Add the esbuild suffix  */
+    "builder": "@angular-devkit/build-angular:browser-esbuild",
+...
+
+
+```
